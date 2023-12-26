@@ -1,0 +1,31 @@
+NAT Network		: IP = 192.168.0.0/24
+Host-Only Network	: IP = 10.10.10.1 – Netmask 255.255.255.0 – Disable DHCP
+sudo nano /etc/netplan/00-installer-config.yaml
+	enp0s8W:
+	addresses:
+-	10.10.10.21/04
+dhcp4: false
+sudo apt update && sudo apt upgrade
+sudo apt install unzip 7zip
+sudo apt install apache2
+sudo systemctl status apache2
+sudo apt install php libapache2-mod-php php-mbstring php-xmlrpc php-soap php-gd php-xml php-cli php-zip php-bcmath php-tokenizer php-json php-pear php-curl
+sudo apt install mariadb-server
+Buat Database MYSQL	:
+	CREATE DATABASE laravel_db;
+	CREATE USER ‘laravel_user’@’localhost’ IDENTIFIED BY ‘password’;
+	GRANT ALL ON laravel_db.* TO ‘laravel_user’@’localhost’;
+	FLUSH PRIVILEGES;
+	QUIT;
+curl -sS https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/local/bin/composer
+sudo chmod +x /usr/local/bin/composer
+cd your_project
+composer create-project –prefer-dist laravel/laravel laravel-project
+php artisan serve –host=10.10.10.21 –port=8000
+
+JIKA GAGAL
+
+•	Restart VMBox
+•	Restart Device
+•	Tunggu 20 Menit, lalu jalankan php artisans serve
