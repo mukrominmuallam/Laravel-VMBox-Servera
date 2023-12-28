@@ -20,8 +20,8 @@ Buat Database MYSQL	:
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 sudo chmod +x /usr/local/bin/composer
-cd your_project
 composer create-project –prefer-dist laravel/laravel laravel-project
+cd your_project
 php artisan serve –host=10.10.10.21 –port=8000
 
 JIKA GAGAL
